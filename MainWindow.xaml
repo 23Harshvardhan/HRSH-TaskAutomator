@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HRSH_TaskAutomator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="HRSH TaskAutomator" Height="450" MinHeight="450" Width="800" MinWidth="800">
     <Grid>
-        
+        <GroupBox Header="Tasks" HorizontalAlignment="Left" Width="400"/>
+        <Button x:Name="btnAddTask" Content="Add New Task" HorizontalAlignment="Left" Margin="405,10,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
+
     </Grid>
 </Window>
