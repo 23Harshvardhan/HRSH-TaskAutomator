@@ -1,0 +1,12 @@
+﻿<Window x:Name="tskBldrWind" x:Class="HRSH_TaskAutomator.Windows.TaskBuilder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HRSH_TaskAutomator.Windows"
+        mc:Ignorable="d"
+        Title="Task Builder" Height="450" Width="450" MaxHeight="450" MaxWidth="450">
+    <Grid>
+        
+    </Grid>
+</Window>

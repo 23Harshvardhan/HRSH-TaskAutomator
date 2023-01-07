@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HRSH_TaskAutomator.Tools;
+using HRSH_TaskAutomator.Windows;
 
 namespace HRSH_TaskAutomator
 {
@@ -41,7 +42,8 @@ namespace HRSH_TaskAutomator
 
             if(!File.Exists(Paths.tasksFile))
             {
-                File.Create(Paths.tasksFile);
+                FileStream fs = File.Create(Paths.tasksFile);
+                fs.Dispose();
             }
         }
 
@@ -52,9 +54,10 @@ namespace HRSH_TaskAutomator
             foreach(string task in tasks)
             {
                 Button taskBtn = new Button();
-                taskBtn.Width = 390;
+                taskBtn.HorizontalAlignment = HorizontalAlignment.Stretch;
                 taskBtn.Height = 32;
                 taskBtn.Content = task;
+                taskBtn.Margin = new Thickness(0,0,0,5);
 
                 tasksPnl.Children.Add(taskBtn);
             }
@@ -64,6 +67,13 @@ namespace HRSH_TaskAutomator
         {
             initializeDirectories();
             loadTasks();
+        }
+
+        private void btnAddTask_Click(object sender, RoutedEventArgs e)
+        {
+            TaskBuilder tskBldr = new TaskBuilder();
+            tskBldr.Owner = this;
+            tskBldr.ShowDialog();
         }
     }
 }
